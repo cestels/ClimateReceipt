@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ClimateReceipt</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/png" href="img/favicon.ico">
+</head>
+<body>
+
+   
+    <div class="top-left-info">
+        <p id="date-time"></p>
+    </div>
+
+    
+    <div id="weather" class="top-right-info">
+        <p>...</p>
+    </div>
+    
+    
+    <div class="scroll-container">
+        
+        
+        <section class="window" id="window1">
+            <h1 style="mix-blend-mode: screen;">Climate Receipt</h1>
+        </section>
+
+        
+        <section class="window" id="window2">
+            <div class="scrolling-text-wrapper">
+                <div class="scrolling-text">
+                    Rising temperatures, rising concerns; our planet's warning is getting louder. &nbsp; 
+                    Rising temperatures, rising concerns; our planet's warning is getting louder. &nbsp;
+                </div>
+            </div>
+        </section>
+
+        
+        <section class="window" id="window3">
+            <div class="flex-container" id="finestra3">
+                <div class="flex-item">
+                    <img src="img/DownloadDepot_Receipt.svg" alt="Receipt"> 
+                </div>
+
+                <div class="flex-item">
+                    <div class="front">
+                        <button class="button-5" id="downloadButton">download</button> 
+                        <script src="download.js"> </script>
+                    </div>
+                    <img src="img/DownloadDepot_Download.svg" alt="Download">
+                </div>
+            </div>
+        </section>
+
+       
+        <section class="window" id="window4">
+            <div class="flex-container" id="GRAFICO_C">
+                <div class="flex-item" id="GRAFICO"> 
+                    <h2 style="font-size: 50px; margin-bottom: 20px;">Based on real-time temp data</h2>
+                    <img src="img/GRAFICO.svg" alt="GRAFICO">
+                    <h4 style="font-size: 10px; text-align: left; color: rgb(158, 158, 158); margin-left: 20px;">***A graph illustrating the rise in average temperatures, comparing data from 2005 to 2023.***</h4>
+                </div>
+        
+                <div class="flex-item" id="GRAFICO">
+                    <p style="margin-bottom: 50px; margin-top: 40px;">The font is inspired by alarming data from the Alessandro Serpieri Meteorological Observatory and real-time temperature data from the OpenWeatherMap’s API. The heaviest font weight corresponds to the highest recorded temperature in the city [39.4°C in 2022], while the lightest weight reflects the lowest recorded temperature [-12.4°C in 1985].</p>
+                    <h4 style="font-size: 10px; text-align: left; color: rgb(158, 158, 158);">200px - Last API call</h4>
+                    <h2 id="temp" style="margin-top: -40px; text-align: left; align-items: left; margin-left: -50px;"> ... </h2>
+                </div>
+            </div>
+        </section>
+
+        <section class="window" id="window5">
+            <div style="flex-direction: column;">
+                <h3 style="font-weight: 600; font-size: 15px; text-align: center; width: 680px; margin-bottom: -40px;">2°</h3>
+                <h3 style="font-weight: 200; font-size: 40px; text-align: center; width: 680px;">Rising temperatures, rising concerns; our planet's warning is getting louder</h3>
+                <h3 style="font-weight: 600; font-size: 15px; text-align: center; width: 680px; margin-bottom: -40px;">9°</h3>
+                <h3 style="font-weight: 400; font-size: 40px; text-align: center; width: 680px;">Rising temperatures, rising concerns; our planet's warning is getting louder</h3>
+                <h3 style="font-weight: 600; font-size: 15px; text-align: center; width: 680px; margin-bottom: -40px;">24°</h3>
+                <h3 style="font-weight: 660; font-size: 40px; text-align: center; width: 680px;">Rising temperatures, rising concerns; our planet's warning is getting louder</h3>
+                <h3 style="font-weight: 600; font-size: 15px; text-align: center; width: 680px; margin-bottom: -40px;">39°</h3>
+                <h3 style="font-weight: 900; font-size: 40px; text-align: center; width: 680px;">Rising temperatures, rising concerns; our planet's warning is getting louder</h3>
+            </div>
+        </section>
+        
+        <style>
+        
+        @media (max-width: 600px) {
+            h3[style] {
+                font-size: 10px !important; 
+                width: 100% !important; 
+                text-align: center !important; 
+            }
+        
+            h3[style*="font-size: 40px;"] {
+                font-size: 20px !important; 
+                margin-top: 40px;
+            }
+        }
+        </style>
+        
+
+        <section class="window" id="window6">
+            <div class="flex-container" id="GRAFICO_C"> 
+                <div class="flex-item" id="GRAFICO"> 
+                    <img src="img/A_GIF.gif" alt="glifi" style="width: 100%; height: auto; align-items: center; mix-blend-mode: screen;">    
+                </div>
+            
+                <div class="flex-item" id="GRAFICO"> 
+                    <img src="img/Glyphs_GIF.gif" alt="glifix" style="width: 100%; height: auto; align-items: center; mix-blend-mode: screen;">
+                </div> 
+            </div>
+        </section>
+        
+
+        <section class="window" id="window7">
+            <div>
+                <h4 style="text-align: center; color: #000;">Try out the font! Type your text and adjust the weight by moving the slider.</h4>
+                <h4 style="text-align: center; color: #000;">*********************************</h4>
+            </div>
+            <div class="font-editor-container">
+                <textarea id="fontEditor" placeholder="Just by fixing broken climate zones, we help a very quick planet thrive and grow amid rising global warming concerns." spellcheck="false"></textarea>
+                <div style="display: flex; flex-direction: row; align-items: center; margin-top: 0%;">
+                    <h4 style="color: #000000; padding-right: 10px;">-12.4°</h4>
+                    <input type="range" min="100" max="1000" class="slider" id="slider">
+                    <h4 style="color: #000000; padding-left: 10px;">39.4°</h4>
+                </div>
+            </div>
+            <script>
+                const slider = document.getElementById('slider');
+                const fontEditor = document.getElementById('fontEditor');
+        
+                slider.addEventListener('input', function() {
+                    const weight = slider.value;
+                    fontEditor.style.fontVariationSettings = `'wght' ${weight}`;
+                });
+            </script>
+            <h4 style="text-align: center; color: black;">*********************************</h4>
+        </section>  
+        
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                const textarea = document.getElementById('fontEditor');
+        
+                
+                function autoResize() {
+                    textarea.style.height = 'auto'; 
+                    textarea.style.height = textarea.scrollHeight + 'px'; 
+                }
+        
+                
+                textarea.addEventListener('input', autoResize);
+        
+               
+                autoResize();
+            });
+        </script>
+        
+
+        <footer class="footer">
+            <div class="footer-content">
+                <div class="left-section">
+                    <h4>If you're interested in exploring the variable font version of this design, feel free to download the TTF Variable font file here.</h4>
+                    <button class="button-6" id="downloadttf" onclick="downloadFile()">Download Variable Font</button>
+                    <script src="downloadvar.js"> </script>
+                </div>
+        
+                <div class="right-section">
+                    <h4>This project is a non-profit initiative created by Elisa Colonnelli as part of the IsiaU's Type Design II course. It was developed under the guidance of Professor Francesco del Rosso purely for educational purposes and to contribute to the community. No commercial interests are involved.</h4>
+                </div>
+            </div>
+        </footer>
+        
+    </div>
+
+
+    <script src="dateandtime.js"></script>
+    <script src="script.js"></script>
+
+</body>
+</html>
