@@ -64,7 +64,7 @@ async function getTemperature() {
 }
 
 async function downloadZIP(relativePath, fileName) {
-    const repoName = 'ClimateReceipt_Specimen';
+    const repoName = 'ClimateReceipt';
     const baseUrl = `https://cestels.github.io/${repoName}/`;
     const fileUrl = baseUrl + relativePath;
 
